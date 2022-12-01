@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -14,6 +15,23 @@ import fname8 from 'static/images/인력 변경율, 채용 성공율.png';
 
 function App() {
   const period = '21/11 ~ 22/11';
+
+  const fetchPeriod = () => {
+    const periodCsv = 'static/images/period.csv';
+    return fetch(periodCsv).then(function (res) {
+      const reader = res.body.getReader();
+      const decoder = new TextDecoder('utf-8');
+      return reader.read().then(function (result) {
+        return decoder.decode(result.value);
+      });
+    });
+  };
+
+  useEffect(() => {
+    const data = fetchPeriod();
+    console.log(data);
+  }, []);
+
   return (
     <div class="flex justify-center">
       <header class="masthead mb-auto">
