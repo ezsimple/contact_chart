@@ -13,8 +13,17 @@ import fname9 from 'static/images/전체 입사율, 퇴사율.png';
 import fname8 from 'static/images/인력 변경율, 채용 성공율.png';
 
 function App() {
+  const period = '21/11 ~ 22/11';
   return (
     <div class="flex justify-center">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3>Recruiting Statistics</h3>
+          <div class="text-center">
+            <h4>({period})</h4>
+          </div>
+        </div>
+      </header>
       <div class="outline w-25 pa3 mr2">
         <img src={fname0} alt="월별 입사자수" />
       </div>
@@ -45,6 +54,12 @@ function App() {
       <div class="outline w-25 pa3">
         <img src={fname8} alt="인력 변경율, 채용 성공율" />
       </div>
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p>made by mhlee</p>
+          <p>월별 직원연락망 분석용, 시각화 자료입니다</p>
+        </div>
+      </footer>
     </div>
   );
 }
