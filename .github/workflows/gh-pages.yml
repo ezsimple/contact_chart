@@ -27,6 +27,8 @@ jobs:
         uses: borales/actions-yarn@v4
         with:
           cmd: build # will run `yarn build` command
+        env:
+          CI: false # Treating warnings as errors if process.env.CI = true.
 
       - name: Deploy ghPages
         uses: peaceiris/actions-gh-pages@v3
