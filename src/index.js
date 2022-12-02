@@ -6,14 +6,16 @@ import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
 
 const GlobalStyle = createGlobalStyle`
-  ${reset}
-  /* other styles */
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
 `;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <GlobalStyle /> */}
+    <GlobalStyle />
     <App />
   </React.StrictMode>
 );
