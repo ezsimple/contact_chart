@@ -31,7 +31,7 @@ jobs:
           CI: false # Treating warnings as errors if process.env.CI = true.
 
       - name: Deploy ghPages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: borales/actions-gh-pages@v3
         with:
-          # github_token: ${{ secrets.GITHUB_TOKEN }} # if needed
           publish_dir: ./build
+          github_token: ${{ secrets.GITHUB_TOKEN }} # if needed
