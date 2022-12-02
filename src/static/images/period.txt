@@ -1,1 +1,2 @@
-../../../../../02.python/contact_anal/chart/period.txt
+,period
+0,21/11 ~ 22/11

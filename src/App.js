@@ -35,16 +35,13 @@ function App() {
 
   return (
     <div className="container">
-      <div className="row">
-        <header>
-          <div className="text-center">
-            <h2>Recruiting Statistics</h2>
-            <div>
-              <h4>({period})</h4>
-            </div>
-          </div>
-        </header>
-      </div>
+      <header>
+        <div className="text-center">
+          <h2 className="mb-1">Recruiting Statistics</h2>
+          <h4 className="mb-3">({period})</h4>
+        </div>
+      </header>
+      <div className="row"></div>
 
       <div className="row">
         <div className="text-center">
