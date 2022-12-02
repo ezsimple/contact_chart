@@ -4,18 +4,18 @@ import { readString } from 'react-papaparse';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
-import fname0 from 'images/월별 입사자수.png';
-import fname1 from 'images/월별 퇴사자수.png';
-import fname2 from 'images/월별 고용 성장율.png';
-import fname3 from 'images/부서별 입사자수 .vs. 퇴사자수.png';
-import fname4 from 'images/직급별 입사자수,퇴사자수.png';
-import fname5 from 'images/부서별 바로 퇴사자수.png';
-import fname7 from 'images/직급별 바로 퇴사자수.png';
-import fname6 from 'images/전체 입사자수 .vs. 퇴사자수.png';
-import fname9 from 'images/전체 입사율, 퇴사율.png';
-import fname8 from 'images/인력 변경율, 채용 성공율.png';
+import fname0 from 'static/media/월별 입사자수.png';
+import fname1 from 'static/media/월별 퇴사자수.png';
+import fname2 from 'static/media/월별 고용 성장율.png';
+import fname3 from 'static/media/부서별 입사자수 .vs. 퇴사자수.png';
+import fname4 from 'static/media/직급별 입사자수,퇴사자수.png';
+import fname5 from 'static/media/부서별 바로 퇴사자수.png';
+import fname7 from 'static/media/직급별 바로 퇴사자수.png';
+import fname6 from 'static/media/전체 입사자수 .vs. 퇴사자수.png';
+import fname9 from 'static/media/전체 입사율, 퇴사율.png';
+import fname8 from 'static/media/인력 변경율, 채용 성공율.png';
 
-import periodCsv from 'images/period.txt';
+import periodCsv from 'static/media/period.txt';
 
 function App() {
   const [period, setPeriod] = useState('');
