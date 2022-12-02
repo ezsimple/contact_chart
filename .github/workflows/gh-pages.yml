@@ -9,26 +9,27 @@ jobs:
   deploy:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
-      - name: Setup Node
-        uses: actions/setup-node@v2.1.2
+      - name: Set Node.js 14.x
+        uses: actions/setup-node@v3
         with:
-          node-version: '14.x'
+          node-version: 14.x
 
-      - name: Cache dependencies
-        uses: actions/cache@v2
+      - name: Run install
+        uses: borales/actions-yarn@v4
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          cmd: install # will run `yarn install` command
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }} # if needed
 
-      - run: npm ci
-      - run: npm run build
+      - name: Build production bundle
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: build # will run `yarn build` command
 
-      - name: Deploy
+      - name: Deploy ghPages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          # github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          # github_token: ${{ secrets.GITHUB_TOKEN }} # if needed
+          publish_dir: ./build
