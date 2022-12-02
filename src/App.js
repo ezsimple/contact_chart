@@ -82,8 +82,8 @@ function App() {
       </div>
 
       <div className="row">
-        <footer className="mastfoot mt-auto">
-          <div className="inner text-center">
+        <footer>
+          <div className="text-center">
             <p>made by mhlee</p>
             <p>월별 직원연락망 분석용, 시각화 자료입니다</p>
           </div>
