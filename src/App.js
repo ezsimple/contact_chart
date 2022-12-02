@@ -14,6 +14,7 @@ import fname7 from 'static/media/직급별 바로 퇴사자수.png';
 import fname6 from 'static/media/전체 입사자수 .vs. 퇴사자수.png';
 import fname9 from 'static/media/전체 입사율, 퇴사율.png';
 import fname8 from 'static/media/인력 변경율, 채용 성공율.png';
+import fname10 from 'static/media/부서별 입사율 .vs. 퇴사율.png';
 
 import periodCsv from 'static/media/period.txt';
 
@@ -68,6 +69,9 @@ function App() {
           </div>
           <div>
             <img src={fname6} alt="전체 입사자수 .vs. 퇴사자수" />
+          </div>
+          <div>
+            <img src={fname10} alt="부서별 입사율 .vs. 퇴사율" />
           </div>
           <div>
             <img src={fname9} alt="전체 입사율, 퇴사율" />
