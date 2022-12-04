@@ -1,6 +1,9 @@
 import React, { useRef, useState, useEffect } from 'react';
 import PLACE_HOLDER from 'static/media/placeholder.png';
 
+// 이미지 로딩 시점 (0.1 : 이미지가 1/10정도 나타난 시점에 로딩한다)
+const THRESHOLD_IMAGE = 0.1;
+
 const LazyLoadImage = ({ src }) => {
   const imgRef = useRef(null); //  < HTMLImageElement > null; => typescript에서만 사용가능
   const [isLoad, setIsLoad] = useState(false);
@@ -19,18 +22,19 @@ const LazyLoadImage = ({ src }) => {
   useEffect(() => {
     if (!observer) {
       observer = new IntersectionObserver(onIntersection, {
-        // 확인을 위해 이미지 절반이 나타날 때 로딩한다.
-        threshold: 0.1,
+        threshold: THRESHOLD_IMAGE,
       });
     }
     imgRef.current && observer.observe(imgRef.current);
   }, []);
 
-  return <img ref={imgRef} src={isLoad ? src : PLACE_HOLDER} alt="" />;
+  return (
+    <img ref={imgRef} src={isLoad ? src : PLACE_HOLDER} alt="LazyLoadImage" />
+  );
 };
 
 let observer: IntersectionObserver | null = null;
-const LOAD_IMG_EVENT_TYPE = 'loadImage';
+const LOAD_IMG_EVENT_TYPE = 'LazyLoadImage';
 
 function onIntersection(
   entries: IntersectionObserverEntry[],
