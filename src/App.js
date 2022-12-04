@@ -4,6 +4,8 @@ import { readString } from 'react-papaparse';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 import fname0 from 'static/media/월별 입사자수.png';
 import fname1 from 'static/media/월별 퇴사자수.png';
 import fname2 from 'static/media/월별 고용 성장율.png';
@@ -47,37 +49,37 @@ function App() {
       <div className="row">
         <div className="text-center">
           <div>
-            <img src={fname0} alt="월별 입사자수" />
+            <LazyLoadImage src={fname0} alt="월별 입사자수" />
           </div>
           <div>
-            <img src={fname1} alt="월별 퇴사자수" />
+            <LazyLoadImage src={fname1} alt="월별 퇴사자수" />
           </div>
           <div>
-            <img src={fname2} alt="월별 고용 성장율" />
+            <LazyLoadImage src={fname2} alt="월별 고용 성장율" />
           </div>
           <div>
-            <img src={fname3} alt="부서별 입사자수 .vs. 퇴사자수" />
+            <LazyLoadImage src={fname3} alt="부서별 입사자수 .vs. 퇴사자수" />
           </div>
           <div>
-            <img src={fname4} alt="직급별 입사자수,퇴사자수" />
+            <LazyLoadImage src={fname4} alt="직급별 입사자수,퇴사자수" />
           </div>
           <div>
-            <img src={fname5} alt="부서별 바로 퇴사자수" />
+            <LazyLoadImage src={fname5} alt="부서별 바로 퇴사자수" />
           </div>
           <div>
-            <img src={fname7} alt="직급별 바로 퇴사자수" />
+            <LazyLoadImage src={fname7} alt="직급별 바로 퇴사자수" />
           </div>
           <div>
-            <img src={fname6} alt="전체 입사자수 .vs. 퇴사자수" />
+            <LazyLoadImage src={fname6} alt="전체 입사자수 .vs. 퇴사자수" />
           </div>
           <div>
-            <img src={fname10} alt="부서별 입사율 .vs. 퇴사율" />
+            <LazyLoadImage src={fname10} alt="부서별 입사율 .vs. 퇴사율" />
           </div>
           <div>
-            <img src={fname9} alt="전체 입사율, 퇴사율" />
+            <LazyLoadImage src={fname9} alt="전체 입사율, 퇴사율" />
           </div>
           <div>
-            <img src={fname8} alt="인력 변경율, 채용 성공율" />
+            <LazyLoadImage src={fname8} alt="인력 변경율, 채용 성공율" />
           </div>
         </div>
       </div>

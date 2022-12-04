@@ -10,6 +10,9 @@ const GlobalStyle = createGlobalStyle`
     max-width: 100%;
     max-height: 100%;
   }
+  body { /* Disable Pull-to-Refresh on Mobile Browsers using CSS */
+    overscroll-behavior: contain;
+  }
 `;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
