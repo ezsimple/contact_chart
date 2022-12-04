@@ -5,6 +5,7 @@ import mement from 'moment';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
+// import LazyLoadImage from 'components/LazyLoadImage';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import fname0 from 'static/media/월별 입사자수.png';
@@ -37,7 +38,7 @@ function App() {
 
   useEffect(() => {
     readString(periodCsv, papaConfig);
-  }, [readString]);
+  });
 
   return (
     <div className="container">
