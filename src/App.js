@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { readString } from 'react-papaparse';
+import mement from 'moment';
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -21,7 +22,9 @@ import fname10 from 'static/media/부서별 입사율 .vs. 퇴사율.png';
 import periodCsv from 'static/media/period.txt';
 
 function App() {
-  const [period, setPeriod] = useState('');
+  const today = mement();
+  const prevMonth = today.subtract(1, 'months').format('YY/MM');
+  const [period, setPeriod] = useState('21/11 ~ ' + prevMonth);
 
   const papaConfig = {
     complete: (results, file) => {
