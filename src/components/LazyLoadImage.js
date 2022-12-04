@@ -20,7 +20,7 @@ const LazyLoadImage = ({ src }) => {
     if (!observer) {
       observer = new IntersectionObserver(onIntersection, {
         // 확인을 위해 이미지 절반이 나타날 때 로딩한다.
-        threshold: 0.5,
+        threshold: 0.1,
       });
     }
     imgRef.current && observer.observe(imgRef.current);
