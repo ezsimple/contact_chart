@@ -65,6 +65,9 @@ function App() {
             <LazyLoadImage src={fname3} alt="부서별 입사자수 .vs. 퇴사자수" />
           </div>
           <div>
+            <LazyLoadImage src={fname10} alt="부서별 입사율 .vs. 퇴사율" />
+          </div>
+          <div>
             <LazyLoadImage src={fname4} alt="직급별 입사자수,퇴사자수" />
           </div>
           <div>
@@ -75,9 +78,6 @@ function App() {
           </div>
           <div>
             <LazyLoadImage src={fname6} alt="전체 입사자수 .vs. 퇴사자수" />
-          </div>
-          <div>
-            <LazyLoadImage src={fname10} alt="부서별 입사율 .vs. 퇴사율" />
           </div>
           <div>
             <LazyLoadImage src={fname9} alt="전체 입사율, 퇴사율" />
